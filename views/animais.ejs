@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ConectPet - Plataforma para adoção de animais de estimação" />
+    <meta name="keywords" content="adoção, animais, pets, ONGs, ConectPet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/navegador') %>
+
+    <div class="wrapper">
+      <div class="pets-para-adocao-section">
+        <h2 class="title">Pets para adoção</h2>
+        <p class="subtitle">Pets anunciados em São Paulo.</p>
+
+        <div class="cards-para-adocao">
+          <div class="cards">
+            <% dados.forEach(pet => { %>
+              <a href="/pet/<%= pet.id %>">
+                <div class="card">
+                  <div class="card-pet">
+                    <div class="card-pet-header">Para Adoção</div>
+                    <img src="<%= pet.img %>" alt="<%= pet.nome %>" />
+                    <h3><%= pet.nome %></h3>
+                    <span><%= pet.local %></span>
+                  </div>
+                </div>
+              </a>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>

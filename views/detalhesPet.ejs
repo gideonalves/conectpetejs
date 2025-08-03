@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="ConectPet - Plataforma para adoção de animais de estimação"
+    />
+    <meta name="keywords" content="adoção, animais, pets, ONGs, ConectPet" />
+
+    <!-- Fonte do Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Seus estilos -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+<body>
+  <%- include('partials/navegador') %>
+
+
+    <div class="pet-detalhes">
+      <h1><%= pet.nome %></h1>
+      <div class="pet-container">
+        <img src="<%= pet.img %>" alt="Foto de <%= pet.nome %>" />
+        <div class="pet-descricao">
+          <h2>Sobre <%= pet.nome %></h2>
+          <p><%= pet.descricao %></p>
+        </div>
+      </div>
+
+
+      <div class="pet-info">
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Local:</strong> <%= pet.local %></p>
+        <p><i class="fas fa-dog"></i> <strong>Porte:</strong> <%= pet.porte %></p>
+        <p><i class="fas fa-birthday-cake"></i> <strong>Idade:</strong> <%= pet.idade %></p>
+      </div>
+
+  
+
+      <div class="galeria">
+        <h2>Galeria</h2>
+        <div class="galeria-imagens">
+          <img src="<%= pet.img %>" alt="Foto principal">
+          <img src="/assets/animais/<%= pet.nome %>1.jpg" alt="Foto 1">
+          <img src="/assets/animais/<%= pet.nome %>2.jpg" alt="Foto 2">
+        </div>
+      </div>
+
+      <a class="btn-voltar" href="/">← Voltar</a>
+    </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

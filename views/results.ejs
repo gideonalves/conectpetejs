@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="ConectPet - Plataforma para adoção de animais de estimação"
+    />
+    <meta name="keywords" content="adoção, animais, pets, ONGs, ConectPet" />
+
+    <!-- Fonte do Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Seus estilos -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+<body>
+  
+  <%- include('partials/navegador') %>
+
+  <section id="result">
+    <h2>Resultados para "<%= termo %>"</h2>
+    <% if (results.length === 0) { %>
+      <p>Nenhum animal encontrado.</p>
+       <a href="/animais">
+      <img class="petNaoEncontrado" src="/assets/petNaoEncontrado.png" alt="Pet não encontrado" width="180" />
+       </a>
+      <% } else { %>
+      <ul>
+        <% results.forEach(pet => { %>
+          <li>
+            <img src="<%= pet.img %>" alt="<%= pet.nome %>" width="120" />
+            <h3><a href="/pet/<%= pet.id %>"><%= pet.nome %></a></h3>
+            <p><strong>Estado:</strong> <%= pet.estado %> | <strong>Porte:</strong> <%= pet.porte %></p>
+            <p><%= pet.descricao.substring(0, 120) %>...</p>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </section>
+
+  
+
+  <%- include('partials/footer') %>
+</body>
+</html>

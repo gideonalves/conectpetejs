@@ -1,0 +1,128 @@
+.pet-detalhes {
+  max-width: 900px;
+  margin: 48px auto 32px auto;
+  background: var(--c00);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(37,99,235,0.08);
+  padding: 40px 32px 32px 32px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pet-detalhes h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  color: var(--c08);
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.pet-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pet-container img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+  border: 4px solid #e0e7ff;
+}
+
+.pet-descricao {
+  flex: 1;
+  min-width: 220px;
+}
+
+.pet-descricao h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  color: var(--c05);
+  margin-bottom: 10px;
+}
+
+.pet-descricao p {
+  font-size: 1.08rem;
+  color: var(--c04);
+  line-height: 1.6;
+}
+
+.pet-info {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 32px 0 24px 0;
+  flex-wrap: wrap;
+}
+
+.pet-info p {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 1.08rem;
+  color: var(--c08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.galeria {
+  margin: 32px 0 24px 0;
+}
+
+.galeria h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  color: var(--c05);
+  margin-bottom: 12px;
+}
+
+.galeria-imagens {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.galeria-imagens img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border: 2px solid #e0e7ff;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  border-color: var(--c08);
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin: 32px auto 0 auto;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, var(--c08) 0%, var(--c07) 100%);
+  color: var(--c00);
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.09);
+  transition: background 0.2s, transform 0.2s;
+  text-align: center;
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(90deg, #1e40af 0%, var(--c08) 100%);
+  transform: scale(1.04);
+}

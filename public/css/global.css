@@ -1,0 +1,120 @@
+/* ======= RESET E VARIÁVEIS ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c09: #00a8ff;
+  --c08: #1565c0;
+  --c07: #3b82f6;
+  --c06: #212121;
+  --c05: #333333;
+  --c04: #464646;
+  --c03: #606060;
+  --c02: #ffd54f;
+  --c01: #ffe9a4;
+  --c00: #ffffff;
+}
+
+/* ======= FONTES GLOBAIS ======= */
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--c01);
+  min-height: 100vh;
+}
+
+/* ======= BARRA DE ROLAGEM ======= */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #e3f2fd;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c08);
+  border-radius: 8px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--c08) #e3f2fd;
+}
+
+/* ======= LAYOUT FLEXBOX ======= */
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 140px; /* ajuste conforme altura do nav */
+}
+
+main, .content {
+  flex: 1;
+}
+
+section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ======= ELEMENTOS GLOBAIS ======= */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* ======= BOTÃO GLOBAL ======= */
+.btn, .button {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  background: var(--c08);
+  border: none;
+  border-radius: 50px;
+  padding: 0 32px;
+  min-width: 180px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c00);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover, .button:hover {
+  color: var(--c08);
+  background: var(--c00);
+  border: 2px solid var(--c08);
+}
+
+/* ======= TITULO GLOBAL ======= */
+.title {
+  font-family: 'Roboto Slab', serif;
+  color: var(--c08);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+} 
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 24px 18px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="ConectPet - Plataforma para adoção de animais de estimação"
+    />
+    <meta name="keywords" content="adoção, animais, pets, ONGs, ConectPet" />
+
+    <!-- Fonte do Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Seus estilos -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+<body>
+  
+  <%- include('partials/navegador') %>
+
+     <section id="home">
+      <div class="wrapper">
+        <div class="cards">
+          <article class="card">
+            <h2>Faça uma Doação</h2>
+            <p>
+              Sua doação ajuda a cuidar de animais que precisam de amor e
+              proteção. Contribua para que eles tenham uma nova chance de
+              encontrar um lar.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Apadrinhe um Peludo</h2>
+            <p>
+              Não pode adotar? Você ainda pode ajudar! Ao apadrinhar, você
+              contribui para o cuidado e bem-estar de um animal, garantindo
+              alimento, saúde e carinho.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Não compre. Adote</h2>
+            <p>
+              Milhares de animais esperam por um lar cheio de amor. Ao adotar,
+              você oferece uma segunda chance e combate o abandono.
+            </p>
+          </article>
+        </div>
+
+        <div class="sobre-ong">
+          <div class="imagem-ong">
+           <img src="/assets/animais/faltaNome.jpg" alt="Imagem de um animal de estimação feliz" />
+          </div>
+          <div class="descricao-ong">
+            <h1>Nossa História</h1>
+            <strong>
+              A MAIOR ONG DE PROTEÇÃO DE ANIMAIS VÍTIMAS DE MAUS-TRATOS DO RIO
+              DE JANEIRO.
+            </strong>
+            <p>
+              A ONG Paraíso dos Focinhos é uma organização sem fins lucrativos,
+              localizada no Rio de Janeiro, criada há 14 anos, para resgatar,
+              proteger, tratar e cuidar dos animais de rua até que eles consigam
+              uma família. Atualmente temos mais de 500 animais, entre eles,
+              cães, gatos, cavalos e até mesmo um porquinho.
+            </p>
+            <p>
+              A associação possui três sítios, cada um com aproximadamente 7 mil
+              m². Nossos espaços para cães e gatos possuem quatro gatis, 120
+              baias amplas com até 50 m², com ventiladores, 3 enfermarias,
+              centro médico e muito conforto. Os sítios contam com piscina,
+              parcões, consultório para atendimento dos peludos doentes. Para a
+              comodidade dos cavalos, conseguimos com muita luta e um enorme
+              esforço, construir um haras, com sombra, verde e muito espaço para
+              eles correrem livremente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pets-para-adocao-section">
+      <h2 class="pets-title">Pets para adoção</h2>
+      <p class="pets-subtitle">Pets anunciados em São Paulo.</p>
+   
+      <div class="cards-para-adocao">
+        <% petsHome.forEach(pet => { %>
+          <div class="card">
+              <div class="card-pet">
+
+                <div class="card-pet-header">
+                  Para Adoção  
+                </div>
+                <img src="<%= pet.img %>" alt="<%= pet.nome %>" />
+                <h3><%= pet.nome %></h3>
+                <span><%= pet.local %></span>
+              </div>
+          </div>
+        <% }) %>
+      </div>
+      
+      <div class="ver-pets-btn-wrapper">
+        <a href="/animais" class="ver-pets-btn">Ver pets para adoção</a>
+      </div>
+    </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
