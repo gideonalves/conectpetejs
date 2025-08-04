@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
 const routeIndex = require('./routes/index');
-const livereload = require('livereload');
-const connectLivereload = require('connect-livereload');
+// const livereload = require('livereload');
+// const connectLivereload = require('connect-livereload');
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(__dirname + "/views");
-app.use(connectLivereload());
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.watch(__dirname + "/views");
+// app.use(connectLivereload());
 
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
+// liveReloadServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     liveReloadServer.refresh("/");
+//   }, 100);
+// });
 
 // Configurações
 app.set('view engine', 'ejs');
@@ -21,6 +21,10 @@ app.use(express.static('public'));
 // 👇 Use as rotas separadas
 app.use('/', routeIndex);
 
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Servidor rodando na porta ${process.env.PORT || 3000}`);
 });
+
+// app.listen(3000, () => {
+//   console.log('Servidor rodando em http://localhost:3000');
+// });
