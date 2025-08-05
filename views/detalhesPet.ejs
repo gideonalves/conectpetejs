@@ -49,14 +49,19 @@
 
   
 
-      <div class="galeria">
-        <h2>Galeria</h2>
-        <div class="galeria-imagens">
-          <img src="<%= pet.img %>" alt="Foto principal">
-          <img src="/assets/animais/<%= pet.nome %>1.jpg" alt="Foto 1">
-          <img src="/assets/animais/<%= pet.nome %>2.jpg" alt="Foto 2">
-        </div>
+   <div class="galeria">
+      <h2>Galeria</h2>
+      <div class="galeria-imagens">
+        <% if (pet.galeria && pet.galeria.length > 0) { %>
+          <% pet.galeria.forEach(function(img) { %>
+            <img src="<%= img %>" alt="Foto de <%= pet.nome %>">
+          <% }) %>
+        <% } else { %>
+          <p>Sem imagens disponíveis.</p>
+        <% } %>
       </div>
+    </div>
+
 
       <a class="btn-voltar" href="/">← Voltar</a>
     </div>

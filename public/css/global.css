@@ -43,7 +43,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  padding-top: 140px; /* ajuste conforme altura do nav */
+ /* padding-top: 140px; /* ajuste conforme altura do nav */
 }
 
 main, .content {
@@ -117,4 +117,60 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* ======= MOBILE FIRST RESPONSIVO ======= */
+@media (max-width: 768px) {
+ 
+
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .card {
+    padding: 16px 12px;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn, .button {
+    font-size: 1rem;
+    min-width: auto;
+    width: 100%;
+    height: 44px;
+    padding: 0 24px;
+    margin-top: 8px;
+  }
+
+  .pet-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pet-container img,
+  .galeria-imagens img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .galeria-imagens {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pet-info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

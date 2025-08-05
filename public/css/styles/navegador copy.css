@@ -25,6 +25,24 @@ nav .wrapper .logo img {
     height: 120px;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 3px;
+  background: var(--c07);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
 /*================= SEARCH ==================== */
 .search-box {
   background: var(--c03);
@@ -114,4 +132,56 @@ nav .wrapper .menu ul li a:hover::after{
 }
 
 
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    border: 1px solid red;
+  }
 
+   nav .wrapper .logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+
+  nav .wrapper {
+    gap: 16px;
+    align-items: center;
+  }
+
+    nav .wrapper .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  nav .wrapper.menu-active .menu {
+    display: flex;
+  }
+
+ 
+
+  nav .wrapper .menu ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  nav .wrapper .menu ul li a {
+    font-size: 1rem;
+  }
+
+  /*================= SEARCH ==================== */
+  .search-box {
+    display: none;
+  }
+
+
+
+
+}

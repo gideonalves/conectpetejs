@@ -1,31 +1,22 @@
-<nav id="navigation">
-  <div class="wrapper">
-    <a class="logo" href="#home">
-      <img src="./assets/Logo.svg" alt="" />
-    </a>
+  <nav>
+    <div class="container">
+      <a class="logo" href="/">
+        <img src="./assets/Logo.svg" alt="" />
+      </a>
 
-   <form class="search-box" action="/buscar" method="GET">
-      <input
-        class="search-txt"
-        type="text"
-        name="q"
-        placeholder="Buscar animais ou raças..."
-      />
-      <button class="search-btn" type="submit">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-
-    <div class="menu">
-      <ul>
-        <li><a href="/" class="active">Home</a></li>
+      <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
         <li><a href="/animais">Animais</a></li>
         <li><a href="/ongs">ONGs</a></li>
         <li><a href="/contato">Contato</a></li>
       </ul>
+    </div>  
+  </nav>
 
-      <a class="button" href="/login">Login</a>
-    </div>
-  </div>
-  <script src="header.js"></script>
-</nav>
+<script src="/assets/hamburger.js"></script>

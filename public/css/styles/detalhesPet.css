@@ -126,3 +126,74 @@
   background: linear-gradient(90deg, #1e40af 0%, var(--c08) 100%);
   transform: scale(1.04);
 }
+
+
+
+
+@media (max-width: 768px) {
+  .pet-detalhes {
+    margin: 32px 16px;
+    padding: 24px 18px;
+  }
+
+  .pet-detalhes h1 {
+    font-size: 2rem;
+  }
+
+  .pet-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .pet-container img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
+
+  .pet-descricao {
+    text-align: center;
+  }
+
+  .pet-descricao h2 {
+    font-size: 1.2rem;
+  }
+
+  .pet-info {
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pet-info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .galeria h2 {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .galeria-imagens {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .galeria-imagens img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .btn-voltar {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 32px auto 0 auto;
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
